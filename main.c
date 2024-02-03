@@ -13,6 +13,7 @@ typedef struct {
   char destination[3];
 } Product;
 
+
 // Definindo a estrutura para Paletes (10 produtos)
 typedef struct {
   Product products[10];
