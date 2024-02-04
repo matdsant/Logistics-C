@@ -14,14 +14,14 @@ O sistema gerencia a fila de caminhões, produtos em paletes, realiza estatísti
      - `name`: Nome do produto.
      - `pickupPoint`: Ponto de partida do produto.
      - `destination`: Destino do produto.
-2. 
-**Palete**
+
+2. **Palete**
    - A estrutura `Pallet` representa um palete e contém um array de até 10 produtos.
-3. 
-**Pedidos**
+
+3. **Pedidos**
    - A estrutura `Order` representa um pedido contendo a cidade de destino.
-4. 
-**Caminhão**
+
+4. **Caminhão**
    - A estrutura `Truck` representa um caminhão e inclui:
      - `number`: Número de identificação do caminhão.
      - `pallets`: Array de paletes transportados pelo caminhão.
