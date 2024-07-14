@@ -1,14 +1,30 @@
-# Logistics-C
-Sistema de logística em C: Simulações de criação, organização e movimentação de caminhões, paletes e produtos. Recursos incluem geração aleatória de caminhões, filas, ordenação, arquivo de log e inspeção de produtos.
+<h1 align="center">
+  📦 Logistics-C 🚚
+</h1>
 
+<p align="center">
+  <a href="#-introdução">Introdução</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-estruturas-de-dados">Estruturas de Dados</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-filas-e-pilhas">Filas e Pilhas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-funções-principais">Funções Principais</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-compilação-e-execução">Compilação e Execução</a>
+</p>
 
-# Introdução
-Este projeto tem como objetivo simular o gerenciamento logístico de um centro de distribuição, modelando caminhões, produtos, e operações de carga e descarga.
-O sistema gerencia a fila de caminhões, produtos em paletes, realiza estatísticas e gera um arquivo de log com informações relevantes.
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img alt="License" src="https://img.shields.io/static/v1?label=License&message=MIT&color=8257E5&labelColor=000000">
+  </a>
+</p>
 
-## Estruturas de Dados
+## 💻 Introdução
+
+O projeto **Logistics-C** é um sistema desenvolvido em C para simular a criação, organização e movimentação de caminhões, paletes e produtos. Ele inclui recursos como geração aleatória de caminhões, gestão de filas, ordenação, criação de arquivos de log e inspeção de produtos. Este projeto visa simular o gerenciamento logístico de um centro de distribuição, modelando caminhões, produtos e operações de carga e descarga.
+
+## 📊 Estruturas de Dados
+
 1. **Produtos**
-   - Cada produto é representado pela estrutura `Product`, contendo os seguintes campos:
+   - Estrutura `Product`:
      - `id`: Identificador único do produto.
      - `price`: Preço do produto.
      - `name`: Nome do produto.
@@ -16,13 +32,15 @@ O sistema gerencia a fila de caminhões, produtos em paletes, realiza estatísti
      - `destination`: Destino do produto.
 
 2. **Palete**
-   - A estrutura `Pallet` representa um palete e contém um array de até 10 produtos.
+   - Estrutura `Pallet`:
+     - Contém um array de até 10 produtos.
 
 3. **Pedidos**
-   - A estrutura `Order` representa um pedido contendo a cidade de destino.
+   - Estrutura `Order`:
+     - Representa um pedido contendo a cidade de destino.
 
 4. **Caminhão**
-   - A estrutura `Truck` representa um caminhão e inclui:
+   - Estrutura `Truck`:
      - `number`: Número de identificação do caminhão.
      - `pallets`: Array de paletes transportados pelo caminhão.
      - `order`: Pedido associado ao carregamento do caminhão.
@@ -33,17 +51,29 @@ O sistema gerencia a fila de caminhões, produtos em paletes, realiza estatísti
      - `departureTime`: Horário de partida do caminhão.
      - `arrivalTime`: Horário de chegada do caminhão.
 
-## Filas e Pilhas
-O projeto utiliza uma fila de caminhões (`Queue`) e uma pilha de produtos (`Stack`) para gerenciar a carga e descarga.
+## 🔄 Filas e Pilhas
 
 1. **Fila de Caminhões**
-   - A fila de caminhões (`Queue`) é uma estrutura que mantém a ordem dos caminhões na fila. Contém métodos para inicialização, verificação de vazia ou cheia, adição e remoção de caminhões.
+   - Estrutura `Queue`:
+     - Mantém a ordem dos caminhões na fila.
+     - Métodos:
+       - `initQueue(Queue *queue)`: Inicializa uma fila de caminhões.
+       - `isEmpty(Queue *queue)`: Verifica se a fila está vazia.
+       - `isFull(Queue *queue)`: Verifica se a fila está cheia.
+       - `addToQueue(Queue *queue, Truck truck)`: Adiciona um caminhão à fila.
+       - `removeFromQueue(Queue *queue)`: Remove um caminhão da fila.
 
 2. **Pilha de Produtos**
-   - A pilha de produtos (`Stack`) gerencia a ordem de produtos durante a inspeção. Possui métodos para inicialização, verificação de vazia ou cheia, adição e remoção de produtos.
+   - Estrutura `Stack`:
+     - Gerencia a ordem de produtos durante a inspeção.
+     - Métodos:
+       - `startStack(Stack *stack)`: Inicializa uma pilha de produtos.
+       - `isEmptyStack(Stack *stack)`: Verifica se a pilha está vazia.
+       - `isFullStack(Stack *stack)`: Verifica se a pilha está cheia.
+       - `addToStack(Stack *stack, Product product)`: Adiciona um produto à pilha.
+       - `removeFromStack(Stack *stack)`: Remove um produto da pilha.
 
-## Funções Principais
-O código implementa funções principais para o gerenciamento da fila de caminhões, pilha de produtos e cálculos relacionados ao tempo e valores.
+## 🧩 Funções Principais
 
 1. **Gerenciamento da Fila de Caminhões**
    - `initQueue(Queue *queue)`: Inicializa uma fila de caminhões.
@@ -65,7 +95,8 @@ O código implementa funções principais para o gerenciamento da fila de caminh
    - `findProductToInspect(Truck trucks[10], int inspectProductIndex)`: Encontra o produto a ser inspecionado.
    - `createLog(Truck trucks[10], int inspectProductIndex)`: Cria um arquivo de log com informações sobre os caminhões.
 
-## Funcionalidades
+## ⚙️ Funcionalidades
+
 1. **Simulação**
    - O programa simula a criação de 10 caminhões com produtos aleatórios, tempo de carregamento, doca de carga, horários de partida e chegada. Os produtos são organizados em paletes e ordenados por preço.
 
@@ -77,5 +108,6 @@ O código implementa funções principais para o gerenciamento da fila de caminh
 3. **Arquivo de Log**
    - Os resultados da simulação são registrados em um arquivo de log chamado `log.txt`, incluindo informações sobre cada caminhão, produtos transportados e estatísticas.
 
-## Compilação e Execução
+## 🛠️ Compilação e Execução
+
 O projeto pode ser compilado utilizando um compilador C padrão.
