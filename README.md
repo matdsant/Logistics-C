@@ -8,7 +8,7 @@
   <a href="#-filas-e-pilhas">Filas e Pilhas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-funções-principais">Funções Principais</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-compilação-e-execução">Compilação e Execução</a>
+  <a href="#-executar">Executar</a>
 </p>
 
 <p align="center">
@@ -95,7 +95,7 @@ O projeto **Logistics-C** é um sistema desenvolvido em C para simular a criaç�
    - `findProductToInspect(Truck trucks[10], int inspectProductIndex)`: Encontra o produto a ser inspecionado.
    - `createLog(Truck trucks[10], int inspectProductIndex)`: Cria um arquivo de log com informações sobre os caminhões.
 
-## ⚙️ Funcionalidades
+## ✨ Funcionalidades
 
 1. **Simulação**
    - O programa simula a criação de 10 caminhões com produtos aleatórios, tempo de carregamento, doca de carga, horários de partida e chegada. Os produtos são organizados em paletes e ordenados por preço.
@@ -108,6 +108,6 @@ O projeto **Logistics-C** é um sistema desenvolvido em C para simular a criaç�
 3. **Arquivo de Log**
    - Os resultados da simulação são registrados em um arquivo de log chamado `log.txt`, incluindo informações sobre cada caminhão, produtos transportados e estatísticas.
 
-## 🛠️ Compilação e Execução
+## 🚀 Executar
 
 O projeto pode ser compilado utilizando um compilador C padrão.
